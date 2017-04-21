@@ -8,6 +8,6 @@ class weatherDistro(object):
 		response=request.urlopen("http://api.openweathermap.org/data/2.5/weather?q="+area+"&appid="+self.api_token)
 		return json.load(response)
 
-	def weekly_forecast(self):
-		response=request.urlopen("http://api.openweathermap.org/data/2.5/weather?q="+area+"&appid="+self.api_token)
+	def weekly_forecast(self,area):
+		response=request.urlopen("http://api.openweathermap.org/data/2.5/forecast?q="+area+"&appid="+self.api_token)
 		return json.load(response)
